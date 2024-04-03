@@ -96,7 +96,7 @@ router.put("/person/:id", async (req, res) => {
     console.log(response);
     res.status(200).json(response);
   } catch (error) {
-    res.status(500).json("internal server error");
+    res.status(500).json(" Error:internal server error");
   }
 });
 // Delet person details
