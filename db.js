@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
-
-const URL = "mongodb://127.0.0.1:27017/FullData";
-
+require("dotenv").config();
+const URL_ENV= process.env.URL;
 const ConectDB = async ()=>{
     try {
-        await mongoose.connect(URL);
+        await mongoose.connect(URL_ENV);
         console.log("Connect Data Base");
     } catch (error) {
      console.log(error);   

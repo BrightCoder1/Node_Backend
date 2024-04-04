@@ -4,6 +4,7 @@ const app = express();
 const connectDB = require("./db");
 // import body-persor
 const bodyParser = require("body-parser");
+const PORT = process.env.PORT || 5000;
 
 const router = require("./routers/router");
 app.use(bodyParser.json());
@@ -13,9 +14,8 @@ app.get("/", (req, res) => {
 });
 
 app.use(router);
-
 connectDB().then(() => {
-  app.listen(3000, () => {
+  app.listen(PORT, () => {
     console.log("DONE http://localhost:3000");
   });
 });

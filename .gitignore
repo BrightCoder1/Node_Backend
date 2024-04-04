@@ -1,4 +1,4 @@
 # Ignore node_modeules directory
 node_modeules/
-
+.env
 #other entries.....
